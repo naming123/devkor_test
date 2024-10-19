@@ -10,12 +10,25 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home Screen'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // 카메라 화면으로 이동
-            Navigator.of(context).pushNamed('/camera');
-          },
-          child: const Text('Go to Camera Screen'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                // 카메라 화면으로 이동
+                Navigator.of(context).pushNamed('/camera');
+              },
+              child: const Text('Go to Camera Screen'),
+            ),
+            const SizedBox(height: 20), // 버튼 사이 간격 추가
+            ElevatedButton(
+              onPressed: () {
+                // 새로운 버튼 기능
+                print("New Button Pressed");
+              },
+              child: const Text('New Button'),
+            ),
+          ],
         ),
       ),
     );
