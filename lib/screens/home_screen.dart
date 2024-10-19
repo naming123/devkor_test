@@ -20,10 +20,15 @@ class HomeScreen extends StatelessWidget {
               },
               child: const Text('Go to Camera Screen'),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 20), // 버튼 사이 간격 추가
             ElevatedButton(
               onPressed: () {
-                print("New Button Pressed");
+                // New Button을 눌렀을 때 하단에 메시지를 보여줌
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('New Button Pressed!'),
+                  ),
+                );
               },
               child: const Text('New Button'),
             ),
