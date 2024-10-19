@@ -22,10 +22,9 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
-  uses-material-design: true
-
-  generate: false
   assets:
     - assets/yolov8n.tflite # YOLOv8 모델 파일
     - assets/labels.txt # YOLOv8 라벨 파일
+  uses-material-design: true
 
+  generate: false

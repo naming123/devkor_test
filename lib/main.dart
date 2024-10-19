@@ -73,9 +73,9 @@ class CameraScreenState extends State<CameraScreen> {
   @override
   void initState() {
     super.initState();
+    _loadYoloModel();
     // 카메라 초기화 및 YOLO 모델 로드
     _initializeCamera();
-    _loadYoloModel();
   }
 
   Future<void> _initializeCamera() async {
